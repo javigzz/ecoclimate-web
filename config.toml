@@ -8,12 +8,12 @@ theme = "hugo-minimalist-theme"
 
 [params]
     site_author = "ecoClimate Team"
-    site_description = "The awesome blog of John Doe."
+    site_description = "ecoClimate is a project to pre-process and make available the climatic layers from the PMIP3 – CMIP5 projects for macroecologists and biogeographers"
     location = "Earth"
     # Link custom assets relative to /static
-    avatar = "img/profile-image.png"
-    header_background = "img/desk.jpg"
-    header_title = "Customizable header title"
+    avatar = "img/avatar-ecoclimate.jpeg"
+    header_background = "img/ecoclimate-background-map-2.jpg"
+    header_title = "Climatic layers from PMIP3 and CMIP5 projects"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     custom_css = []
     custom_js  = []
