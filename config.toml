@@ -1,3 +1,38 @@
-baseURL = "http://example.org/"
+baseurl = "http://ecoclimate.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "ecoClimate - Climatic layers from PMIP3 CMIP5"
+# Define how many pages appear per site
+paginate = 10
+
+theme = "hugo-minimalist-theme"
+
+[params]
+    site_author = "ecoClimate Team"
+    site_description = "The awesome blog of John Doe."
+    location = "Earth"
+    # Link custom assets relative to /static
+    avatar = "img/profile-image.png"
+    header_background = "img/desk.jpg"
+    header_title = "Customizable header title"
+    copyright = "Powered by [Hugo](http://gohugo.io)."
+    custom_css = []
+    custom_js  = []
+
+    # Define which content types are shown on the homepage
+    mainSections = ["post"]
+
+    # Enable gogle analytics by entering your tracking code
+    google_analytics = ""
+
+[social]
+    # Add your social network accounts to the profile section on the left
+    # by entering your username. The links to your account will be
+    # create automatically.
+    twitter   = ""
+    facebook  = ""
+    linkedin  = ""
+    behance   = ""
+    dribbble  = ""
+    instagram = ""
+    github    = "ecoClimate"
+    gplus     = ""
