@@ -1,14 +1,14 @@
 ---
-title: "About ecoClimate"
-date: 2020-01-11T01:54:45+01:00
 ---
+
+# About ecoClimate
 
 The goal of ecoClimate is to provide an open database of processed climatic
 simulations in a suitable resolution and user-friendly format for macroecological
 and biogeographical studies. Our database includes all climate models currently
 available from CMIP5 and PMIP3 projects for past, present, and future periods.
 
-# Data availability
+## Data availability
 
 The dataset includes simulations for modern (1950-1999), historical (1900-1949), pre-industrial
 (~1760), Mid-Holocene (6ka), Last Glacial Maximum (21ka), Pliocene (3Ma) and future conditions
@@ -17,7 +17,7 @@ models (AOGCMs). Future simulations include four representative concentration pa
 (RCPs): RCP2.6 (low emissions scenarios), RCP4.5 and RCP6.0 (intermediate emissions scenarios),
 and RCP 8.5 (high emissions scenario) (see details in Taylor et al. 2009, 2012).
 
-# Data downscaling
+## Data downscaling
 
 Monthly simulations of precipitation and mean, maximum and minimum temperature for all
 time periods and AOGCMs were downloaded in netCDF format from [CMIP5](http://cmip-pcmdi.llnl.gov/cmip5/)
@@ -35,7 +35,7 @@ and future climates. From downscaled data, we generated the 19 bioclimatic varia
 in [WorldClim](http://www.worldclim.org/). This procedure was done using a script developed by
 Matheus Lima-Ribeiro in https://github.com/ecoClimate.
 
-# References
+## References
 
 - TAYLOR KE, STOUFFER RJ and MEEHL GA (2009) A summary of the CMIP5 Experiment Design. Available
   in [CMIP5](http://cmip-pcmdi.llnl.gov/cmip5/).
@@ -46,7 +46,7 @@ Matheus Lima-Ribeiro in https://github.com/ecoClimate.
   Scenario Support for Impact and Climate Analysis. https://www.ipcc-data.org/guidelines/dgm_no2_v1_09_2004.pdf
 
 
-# Acknowledgements
+## Acknowledgements
 
 We first acknowledge the World Climate Research Programme’s Working Group on Coupled Modeling by the
 [CMIP5](http://cmip-pcmdi.llnl.gov/cmip5/) and [PMIP3](https://pmip3.lsce.ipsl.fr/), and we thank the

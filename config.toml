@@ -4,35 +4,72 @@ title = "ecoClimate - Climatic layers from PMIP3 CMIP5"
 # Define how many pages appear per site
 paginate = 10
 
-theme = "hugo-minimalist-theme"
+theme = "hugo-theme-chunky-poster"
+#paginate = 2
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+#googleAnalytics = "UA-XXXX"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    identifier = "people"
+    name = "Our Team"
+    url = "/people/"
+    weight = 2
+  [[menu.main]]
+    identifier = "downloads"
+    name = "Downloads"
+    url = "/downloads/"
+    weight = 3
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 4
+  [[menu.main]]
+    identifier = "citation"
+    name = "Citation"
+    url = "/citation/"
+    weight = 5
+  [[menu.main]]
+    identifier = "r-scripts"
+    name = "R Scripts"
+    url = "/r-scripts/"
+    weight = 6
+
 
 [params]
-    site_author = "ecoClimate Team"
-    site_description = "ecoClimate is a project to pre-process and make available the climatic layers from the PMIP3 – CMIP5 projects for macroecologists and biogeographers"
-    location = "Earth"
-    # Link custom assets relative to /static
-    avatar = "img/avatar-ecoclimate.jpeg"
-    header_background = "img/ecoclimate-background-map-2.jpg"
-    header_title = "Climatic layers from PMIP3 and CMIP5 projects"
-    copyright = "Powered by [Hugo](http://gohugo.io)."
-    custom_css = []
-    custom_js  = []
+  author = "ecoClimate Team"
+  homepageImage = "img/ecoclimate-background-map-2.jpg"
+  share = true
+  showLanguageSwitcher = false
 
-    # Define which content types are shown on the homepage
-    mainSections = ["post"]
+  [params.social]
+    rss = false
+    github = "https://github.com/ecoClimate"
+    #email = ""
 
-    # Enable gogle analytics by entering your tracking code
-    google_analytics = ""
+  [params.prismJS]
+    enable = true
+    theme = ""
 
-[social]
-    # Add your social network accounts to the profile section on the left
-    # by entering your username. The links to your account will be
-    # create automatically.
-    twitter   = ""
-    facebook  = ""
-    linkedin  = ""
-    behance   = ""
-    dribbble  = ""
-    instagram = ""
-    github    = "ecoClimate"
-    gplus     = ""
+  [params.commento]
+    enable = true
+    url = "https://commento.io"
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[services]
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
