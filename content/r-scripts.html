@@ -1,0 +1,66 @@
+---
+---
+<style>
+    pre.rcode {
+        background: #fafafa;
+        border: 1px solid #eee;
+        color: #ff0000;
+        padding: 20px;
+    }
+</style>
+<h1>R scripts</h1>
+
+<p>R-scripts to deal with netCDF files, perform downscaling and compute 19 bioclimatic variables are available at <a
+    href="https://github.com/ecoClimate" target="_blank">github.com/ecoClimate</a>.
+</p>
+<p>Explore them and advance your limits on new variables!</p>
+
+<p>Here you have an R-script for opening ecoClimate.org layers in R. Our climatic layers are stored as *.txt* files. Thus,
+    you need to open them using the function read.table and then construct raster files (maps) as follows:</p>
+
+<p>1. <strong>download the climatic layers</strong> (.txt files) from ecoClimate.org</p>
+<p>2. <strong>save them</strong> in a folder in your computer and use the function ‘setwd’ to set this folder as the working
+    directory</p>
+<p>3. open the file in R using ‘read.table’</p>
+<pre class="rcode">setwd("Path/Of/Folder/With/Climatic/Layers")
+
+CCSM_LGM &lt;- read.table("FileName.txt",&nbsp;header&nbsp;= TRUE)
+
+head(CCSM_LGM)</pre>
+
+<p>4. <strong>load the libraries</strong> to work with GIS formats in R, (install them first if you do not
+    have them in your computer; use the function ‘install.packages’)</p>
+<pre class="rcode">library(sp)
+
+library(raster)</pre>
+
+<p>5. Run this simple code in order to construct raster files for each climatic layer</p>
+<pre>gridded(CCSM_LGM)&nbsp;&lt;- ~long+lat
+
+map_CCSM_LGM &lt;- stack(CCSM_LGM)</pre>
+
+<p>6. Finally, you can plot the raster files using your own palette of colours</p>
+<pre class="rcode">colores_t &lt;- colorRampPalette (c("darkblue", "blue",
+
+            "lightblue",&nbsp;"white", "salmon", "red"))</pre>
+
+<p>in this example, we are plotting the temperature variables (thus, we select the maps 2 to 12))</p>
+
+<pre class="rcode">plot (map_CCSM_LGM [[c(2:12)]], axes=F, box=F, col=colores_t (100))</pre>
+
+<p>here, we use $ in order to select one specific variable (e.g., bio.1)</p>
+<pre class="rcode">par (mar=c(1,1,1,1))
+
+plot (map_CCSM_LGM$bio.1, axes=F, box=F, col=colores_t(100), legend=T)
+
+title ("LGM Bio1 CCSM")</pre>
+
+<p>now, we are going to change the colours because we want to plot the precipitation layers (13 to 20)</p>
+<pre class="rcode">colores_p &lt;- colorRampPalette (c("white","lightblue","blue", "darkblue"))
+
+plot (map_CCSM_LGM [[c(13:20)]], axes=F, box=F, col=colores_p (100))</pre>
+
+<p>we hope that this R-script will help you to understand how to easily work in R with raster files<br>
+Best,<br>
+Sara Varela and Matheus Lima-Ribeiro</p>
+
