@@ -1,13 +1,16 @@
 install:
+- pip install --user awscli
 - wget https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
 - hugo version
 
 before_script:
 - rm -rf public
+- hugo
 
 script:
-- hugo
+- aws s3 sync public/ s3://ecoclimate-web --acl public-read --delete # copy the files to s3
+- aws cloudfront create-invalidation --distribution-id EVHVCN7YECGZE --paths '/*'
 
 branches:
   only:
